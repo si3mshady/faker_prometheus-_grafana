@@ -15,5 +15,5 @@ ENTRYPOINT [ "node" ]
 CMD [ "app.js" ]
 
 HEALTHCHECK --interval=5m --timeout=3s \
-  CMD curl -f http://localhost:888/data || exit 1
+  CMD curl -X POST -f '{}'  http://localhost:888/data || exit 1
 
